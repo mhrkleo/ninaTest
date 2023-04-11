@@ -2,25 +2,21 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Location extends Model
 {
     use HasFactory;
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $table = "User";
+    protected $table = "Location";
     protected $primaryKey = "id";
     protected $fillable = [
         'name',
-        'age',
-        'gender',
-        'location',
     ];
 }
