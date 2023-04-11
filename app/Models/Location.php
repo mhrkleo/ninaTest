@@ -15,8 +15,11 @@ class Location extends Model
      * @var array<int, string>
      */
     protected $table = "Location";
-    protected $primaryKey = "id";
+    protected $primaryKey = "location_id";
     protected $fillable = [
-        'name',
+        'name'
+    ];
+    protected $hidden = [
+        'location_id'
     ];
 }

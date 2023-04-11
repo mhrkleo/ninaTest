@@ -20,7 +20,14 @@ class User extends Model
     protected $fillable = [
         'name',
         'age',
-        'gender',
-        'location',
+        'gender'
     ];
+    protected $hidden = [
+        'id',
+        'location_id'
+    ];
+    function getLocation()
+    {
+        return $this->hasOne('App\Models\Location', 'location_id');
+    }
 }

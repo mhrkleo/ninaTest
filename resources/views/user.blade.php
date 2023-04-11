@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GeeksforGeeks</title>
+    <title>User</title>
 </head>
 <body>
     <h1>Users</h1>
     <ul>
-        @foreach ($articles as $article)
-            <li>{{ $article }}</li>
+        @foreach ($users as $user)
+            <li>{{ $user }}</li>
         @endforeach
     </ul>
 </body>

@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
-use App\Models\Location;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +14,4 @@ use App\Models\Location;
 |
 */
 
-Route::get('/', function () {
-    $articles = User::all();
-    return view('user', ['articles' => $articles]);
-});
+Route::get('/', [UserController::class,'getUser']);
